@@ -4,17 +4,20 @@ using System.Text;
 
 namespace DataProcessor
 {
-    struct CallResponseData
+    struct Response
     {
-        struct Response {
-
         string UnitID;
         string UnitType;
         DateTime Dispatched;
         DateTime Arrived;
+    }
 
-        }
-
+    struct CallResponseData
+    {
         string CallID;
+        string NatureCode;
+        DateTime CallRecived;
+        string Address;
+        Response[] Responces;
     }
 }
