@@ -12,7 +12,7 @@ namespace DataProcessor
         public string NatureCode;
         public DateTime CallRecived;
         public string Address;
-        public Response[] Responses;
+        public List<Response> Responses;
 
         /// <summary>
         /// Data for a response to a call
@@ -27,7 +27,6 @@ namespace DataProcessor
             /// <summary>
             /// Data about response to a call
             /// </summary>
-            /// 
             /// <param name="unitID">ID of responding unit</param>
             /// <param name="unitType">Type of Unit</param>
             /// <param name="dispatched">Time unit was dispached to scene</param>
@@ -49,7 +48,7 @@ namespace DataProcessor
         /// <param name="callRecived">Tiem call was recived at dispach</param>
         /// <param name="address">Address of emergency</param>
         /// <param name="responses">Array of all units dispached to emergency site</param>
-        public CallResponseData ( string callID, string natureCode, DateTime callRecived, string address, Response[] responses)
+        public CallResponseData ( string callID, string natureCode, DateTime callRecived, string address, List<Response> responses)
         {
             CallID = callID;
             NatureCode = natureCode;
