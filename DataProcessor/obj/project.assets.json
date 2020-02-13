@@ -8,23 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\Danger Zone\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\haoli\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Danger Zone\\Source\\Repos\\HaolinLiu\\Fire-EMS-Predictive-Modeling\\DataProcessor\\DataProcessor.csproj",
+      "projectUniqueName": "C:\\Users\\haoli\\Desktop\\CS 462\\Fire-EMS-Predictive-Modeling\\DataProcessor\\DataProcessor.csproj",
       "projectName": "DataProcessor",
-      "projectPath": "C:\\Users\\Danger Zone\\Source\\Repos\\HaolinLiu\\Fire-EMS-Predictive-Modeling\\DataProcessor\\DataProcessor.csproj",
-      "packagesPath": "C:\\Users\\Danger Zone\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Danger Zone\\Source\\Repos\\HaolinLiu\\Fire-EMS-Predictive-Modeling\\DataProcessor\\obj\\",
+      "projectPath": "C:\\Users\\haoli\\Desktop\\CS 462\\Fire-EMS-Predictive-Modeling\\DataProcessor\\DataProcessor.csproj",
+      "packagesPath": "C:\\Users\\haoli\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\haoli\\Desktop\\CS 462\\Fire-EMS-Predictive-Modeling\\DataProcessor\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Danger Zone\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\haoli\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -62,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
