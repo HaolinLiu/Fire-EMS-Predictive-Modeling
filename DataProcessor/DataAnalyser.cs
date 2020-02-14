@@ -114,5 +114,17 @@ namespace DataProcessor
 			return data;
 		}
 
+		public void SummaryData(CallResponseData Data){
+
+			Console.WriteLine("Call numbers:");
+			Console.WriteLine("Response Numbers:");
+			Console.WriteLine("Average response numbers:");
+			Console.WriteLine("Nature code type numbers:");
+			Console.WriteLine("Response unit type:");
+			Console.WriteLine("Start data:");
+			Console.WriteLine("End data");
+
+		}
+
 	}
 }
