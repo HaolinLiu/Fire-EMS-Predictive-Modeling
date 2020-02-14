@@ -22,7 +22,8 @@ namespace DataProcessor
                 string[] colNames = streamReader.ReadLine().Split(',');
                 foreach (string colName in colNames)
                 {
-                    newDataTable.Columns.Add(colName);
+                    string colNameSansSpace = colName.Replace(" ", "");
+                    newDataTable.Columns.Add(colNameSansSpace);
                 }
 
                 while (!streamReader.EndOfStream)
@@ -36,7 +37,7 @@ namespace DataProcessor
                     newDataTable.Rows.Add(newDataRow);
                 }
             }
-
+            Console.WriteLine("Data Table size: " + newDataTable.Rows.Count);
             return newDataTable;
         }
 
