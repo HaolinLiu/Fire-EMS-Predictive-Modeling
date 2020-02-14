@@ -1,20 +1,26 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.ML.Data;
 
 namespace DataProcessor
 {
 
     public class CallResponseData
     {
-
+        
         public string CallID;
+
+        [LoadColumn(0)]
         public string NatureCode;
+
         public DateTime CallRecived;
         public string Address;
         public List<Response> Responses;
         public int ResponsesNum;
         public long Result;
+
+        string responseStr;
 
         /// <summary>
         /// Data for a response to a call
@@ -62,5 +68,6 @@ namespace DataProcessor
             Result = result;
         }
     }
+    
 }
 
