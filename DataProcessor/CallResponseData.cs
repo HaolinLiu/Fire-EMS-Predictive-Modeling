@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace DataProcessor
 {
 
-    public struct CallResponseData
+    public class CallResponseData
     {
 
         public string CallID;
@@ -13,6 +13,8 @@ namespace DataProcessor
         public DateTime CallRecived;
         public string Address;
         public List<Response> Responses;
+        public int ResponsesNum;
+        public long Result;
 
         /// <summary>
         /// Data for a response to a call
@@ -48,13 +50,17 @@ namespace DataProcessor
         /// <param name="callRecived">Tiem call was recived at dispach</param>
         /// <param name="address">Address of emergency</param>
         /// <param name="responses">Array of all units dispached to emergency site</param>
-        public CallResponseData ( string callID, string natureCode, DateTime callRecived, string address, List<Response> responses)
+      
+        public CallResponseData(string callID, string natureCode, DateTime callRecived, string address, List<Response> responses, int responsesNum, long result)
         {
             CallID = callID;
             NatureCode = natureCode;
             CallRecived = callRecived;
             Address = address;
             Responses = responses;
+            ResponsesNum = responsesNum;
+            Result = result;
         }
     }
 }
+
