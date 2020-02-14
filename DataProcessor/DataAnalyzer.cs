@@ -6,8 +6,6 @@ using System.Collections.Generic;
 namespace DataProcessor
 {	
 	
-
-    
 	public class AnalyzeData
 	{
 	
