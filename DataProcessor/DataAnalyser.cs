@@ -19,7 +19,7 @@ namespace DataProcessor
         public string[] UnitTypeName = new string[100]; 
 		// for store name of unit types
 
-        int callCount = 0;
+        public int callCount = 0;
 
 
 		public int AddTypeName(string role){
@@ -60,8 +60,8 @@ namespace DataProcessor
 			foreach (DataRow row in callData.Rows)
 			{
 				//read the relevent data out of the data table
-				string callID = row["CallID"].ToString();
-				string natureCode = row["NatureCode"].ToString();
+				string callID = row["Call ID"].ToString();
+				string natureCode = row["Nature Code"].ToString();
 				DateTime callTime = DateTime.Parse(row["Date"].ToString());
 				string address = row["Address"].ToString();
 				
