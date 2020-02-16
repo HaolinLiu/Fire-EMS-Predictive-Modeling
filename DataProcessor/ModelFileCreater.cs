@@ -17,7 +17,7 @@ namespace DataProcessor
             StreamWriter sw = new StreamWriter(fs);
             StringBuilder sb = new StringBuilder();
 
-            sb.Append("NatureCode").Append(",").Append("Result").Append(",");
+            sb.Append("NatureCode").Append(",").Append("Result");
             // title 
             sw.WriteLine(sb);
             // flush
