@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.IO;
 
 namespace DataProcessor
 {
@@ -30,12 +31,14 @@ namespace DataProcessor
             this.Result = Result;
         }
 
-        public void PrintResult(){
+        public void ConsoleResult(){
             long result;
 
-            Console.WriteLine("Result:\n");
+            Console.WriteLine("Result:");
 
-            for (int i=1; i<=NatureCodeNum; i++){
+            Console.WriteLine("Nature Code Number:{0}\n", NatureCodeNum);
+
+            for (int i=0; i<NatureCodeNum; i++){
 
                 Console.WriteLine("Nature code:{0}.", NatureCode[i]);
 
@@ -48,6 +51,50 @@ namespace DataProcessor
                     // delete last digit
                 }
             }
+        }
+
+        public void PrintResult(string dataFileDir){
+            string rulesPath = dataFileDir + "/rules.csv";
+
+            FileStream fs = new FileStream(rulesPath, FileMode.Create, FileAccess.Write);
+            StreamWriter sw = new StreamWriter(fs);
+            StringBuilder sb = new StringBuilder();
+ 
+            sb.Append("ID").Append(",").Append("NatureCode").Append(",").Append("Result");
+            // title 
+            sw.WriteLine(sb);
+            // flush
+            sw.Flush();
+            sw.Close();
+            fs.Close();
+
+            // write data
+            StreamWriter swd = new StreamWriter(rulesPath, true, Encoding.Default);
+            string row;
+            long result;
+
+            for (int i=0; i<NatureCodeNum; i++){
+
+                row = (i+1).ToString() + "," + NatureCode[i] + ",";
+
+                result = Result[i];
+
+                for (int j=0; j<UnitTypeNum; j++) {
+                    
+                    row = row + result % 10 + UnitTypeName[j] + " ";
+                    // Console.WriteLine("{0} {1}", result % 10, UnitTypeName[j]);
+                    // get last digit
+
+                    result = result / 10;
+                    // delete last digit
+                }
+
+                swd.WriteLine(row);
+                // add data from each row
+            }
+           
+            swd.Flush();
+            swd.Close();
         }
     }
 }

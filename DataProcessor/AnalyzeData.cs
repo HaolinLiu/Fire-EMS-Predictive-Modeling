@@ -10,17 +10,19 @@ namespace DataProcessor
     
 	public class AnalyzeData
 	{
-	
-		int NatureCodeNum = 0;
-        // how many nature code types
 
 		public int UnitTypeNum = 0;
 		// how many unit types
-        public string[] UnitTypeName = new string[100]; 
+        public List<string> UnitTypeName = new List<string>();
 		// for store name of unit types
 
         public int callCount = 0;
 
+		public bool[] NatureCodeType = new bool[1000];
+		// store if there is the nature code in the data
+		public int NatureCodeTypeNum = 0;
+		// store the nature code type number
+		public List<string> NatureCode = new List<string>();
 
 		public int AddTypeName(string role){
 			for ( int i = 0; i < UnitTypeNum; i++ )
@@ -33,7 +35,7 @@ namespace DataProcessor
             }
 
 			// if there is no this type, add it and incrise the number
-			UnitTypeName[UnitTypeNum] = role;
+			UnitTypeName.Add(role);
 			UnitTypeNum++;
 
 			// return its new id
@@ -49,8 +51,7 @@ namespace DataProcessor
 			//Counter to track what data item we are on
 			int rowCount = 0;
 
-            //set all nature code type to false. When add a call, change its code to 1
-            bool[] NatureCodeType = new bool[1000];
+            //set all nature code type to false. When add a call, change its nature code to true
             for ( int i = 0; i < 1000; i++ )
             {
                 NatureCodeType[i] = false;
@@ -102,12 +103,11 @@ namespace DataProcessor
 
 
 			// get number of different nature code type
-            int NatureCodeTypeNum = 0;
-
             for ( int i = 0; i < 1000; i++ )
             {
                 if (NatureCodeType[i] == true){
                     NatureCodeTypeNum++;
+					NatureCode.Add(i.ToString());
                 }
             }
 
