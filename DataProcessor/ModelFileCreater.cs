@@ -18,7 +18,7 @@ namespace DataProcessor
             StreamWriter sw_trian = new StreamWriter(fs_trian);
             StringBuilder sb_trian = new StringBuilder();
 
-            sb_trian.Append("ID").Append("\t").Append("Result").Append("\t").Append("NatureCode");
+            sb_trian.Append("ID").Append("\t").Append("Result").Append("\t").Append("NatureCode").Append("\t").Append("CallRecived").Append("\t").Append("Address");
             
             // sb.Append("NatureCode").Append("    ").Append("Result");
             // title 
@@ -34,7 +34,7 @@ namespace DataProcessor
             // sbd.Append("321").Append(",").Append("01010").Append(",");
 
             for (int i=0; i<edgeOfTrainAndTest; i++){
-                swd_trian.WriteLine(data[i].CallID + "\t" + data[i].Result + "\t" + data[i].NatureCode);
+                swd_trian.WriteLine(data[i].CallID + "\t" + data[i].Result + "\t" + data[i].NatureCode + "\t" + data[i].CallRecived.ToString() + "\t" + data[i].Address);
                 // add data from each row
             }
            
@@ -47,7 +47,7 @@ namespace DataProcessor
             StreamWriter sw_test = new StreamWriter(fs_test);
             StringBuilder sb_test = new StringBuilder();
 
-            sb_test.Append("ID").Append("\t").Append("Result").Append("\t").Append("NatureCode");
+            sb_test.Append("ID").Append("\t").Append("Result").Append("\t").Append("NatureCode").Append("\t").Append("CallRecived").Append("\t").Append("Address");
             
             // sb.Append("NatureCode").Append("    ").Append("Result");
             // title 
@@ -63,7 +63,7 @@ namespace DataProcessor
             // sbd.Append("321").Append(",").Append("01010").Append(",");
 
             for (int i=edgeOfTrainAndTest+1; i<callNum; i++){
-                swd_test.WriteLine(data[i].CallID + "\t" + data[i].Result + "\t" + data[i].NatureCode);
+                swd_test.WriteLine(data[i].CallID + "\t" + data[i].Result + "\t" + data[i].NatureCode + "\t" + data[i].CallRecived.ToString() + "\t" + data[i].Address);
                 // add data from each row
             }
 

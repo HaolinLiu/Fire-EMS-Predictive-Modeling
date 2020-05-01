@@ -45,6 +45,8 @@ namespace DataProcessor
             CallResponseData[] combinedData = ana.CombineData(callDataTable, ResponseDataTable);
 
             Console.WriteLine(ana.callCount);
+            Console.WriteLine(_trainDataPath);
+            Console.WriteLine(_testDataPath);
             
             // CallResponseData[] combinedData = AnalyzeData.CombineData(callDataTable, ResponseDataTable);
             // Console.WriteLine("" + combinedData.Length);
@@ -132,9 +134,11 @@ namespace DataProcessor
                             // </SnippetMapValueToKey>
                             // <SnippetFeaturizeText>
                             .Append(_mlContext.Transforms.Text.FeaturizeText(inputColumnName: "NatureCode", outputColumnName: "CodeFeaturized"))
+                            .Append(_mlContext.Transforms.Text.FeaturizeText(inputColumnName: "CallRecived", outputColumnName: "DateFeaturized"))
+                            .Append(_mlContext.Transforms.Text.FeaturizeText(inputColumnName: "Address", outputColumnName: "AddressFeaturized"))
                             // </SnippetFeaturizeText>
                             // <SnippetConcatenate>
-                            .Append(_mlContext.Transforms.Concatenate("Features", "CodeFeaturized"))
+                            .Append(_mlContext.Transforms.Concatenate("Features", "CodeFeaturized", "DateFeaturized", "AddressFeaturized"))
                             // </SnippetConcatenate>
                             //Sample Caching the DataView so estimators iterating over the data multiple times, instead of always reading from file, using the cache might get better performance.
                             // <SnippetAppendCache>
