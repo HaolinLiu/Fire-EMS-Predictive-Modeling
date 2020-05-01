@@ -38,8 +38,11 @@ namespace WindowsFormsApp2
             // label1.Text = _trainDataPath;
             // label2.Text = _testDataPath;
 
-            string trainDataPath = "C:\\Users\\haoli\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Data\\ModelFileTrain.tsv";
-            string testDataPath = "C:\\Users\\haoli\\source\\repos\\WindowsFormsApp2\\WindowsFormsApp2\\Data\\ModelFileTrain.tsv";
+            string trainDataPath = "C:\\Users\\haoli\\source\\repos\\Fire-EMS-Predictive-Modeling\\WindowsFormsApp2\\Data\\ModelFileTrain.tsv";
+            string testDataPath = "C:\\Users\\haoli\\source\\repos\\Fire-EMS-Predictive-Modeling\\WindowsFormsApp2\\Data\\ModelFileTrain.tsv";
+
+            // trainDataPath = _trainDataPath;
+            // testDataPath = _testDataPath;
 
 
             ModelFileCreater c = new ModelFileCreater();
@@ -47,8 +50,7 @@ namespace WindowsFormsApp2
 
 
             Console.WriteLine(ana.callCount);
-            Console.WriteLine(trainDataPath);
-            Console.WriteLine(testDataPath);
+
 
 
             // Create MLContext to be shared across the model creation workflow objects 
