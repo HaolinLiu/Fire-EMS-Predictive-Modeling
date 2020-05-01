@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * @Author: Haolin Liu
+ * @Date: 2020-02-14 02:36:52
+ * @LastEditTime: 2020-04-30 17:31:37
+ * @LastEditors: Haolin Liu
+ * @Description: Store the result of machine learning analyse. Can output the result to console or file.
+ */
+ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.IO;

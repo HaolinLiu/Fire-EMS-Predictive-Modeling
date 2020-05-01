@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * @Author: Haolin Liu
+ * @Date: 2020-02-16 01:44:33
+ * @LastEditTime: 2020-04-30 17:32:41
+ * @LastEditors: Haolin Liu
+ * @Description: Make functions for buttons in software windows
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

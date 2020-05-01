@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * @Author: Haolin Liu
+ * @Date: 2020-02-15 20:04:05
+ * @LastEditTime: 2020-04-30 17:22:13
+ * @LastEditors: Haolin Liu
+ * @Description: Combine call and response data together. Collect information from data.
+ */
+using System;
 using System.Data;
 using System.Collections.Generic;
 
@@ -44,7 +51,11 @@ namespace WindowsFormsApp2
 			return UnitTypeNum - 1;
 		}
 
-
+		/**
+         * @description: Combine call and response data together
+         * @param {DataTable, DataTable} 
+         * @return: A list of CallResponseData
+         */
 		public CallResponseData[] CombineData(DataTable callData, DataTable responseData)
 		{
 			//Array of data objects

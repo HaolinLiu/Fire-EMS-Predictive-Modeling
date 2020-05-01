@@ -1,4 +1,11 @@
-﻿namespace WindowsFormsApp2
+﻿/*
+ * @Author: Haolin Liu
+ * @Date: 2020-05-01 01:44:33
+ * @LastEditTime: 2020-04-30 17:33:07
+ * @LastEditors: Haolin Liu
+ * @Description: Build the software windows
+ */
+namespace WindowsFormsApp2
 {
     partial class Dispatch
     {

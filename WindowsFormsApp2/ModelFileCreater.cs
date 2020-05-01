@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * @Author: Haolin Liu
+ * @Date: 2020-02-14 17:14:40
+ * @LastEditTime: 2020-04-30 17:29:56
+ * @LastEditors: Haolin Liu
+ * @Description: Separate data to train and test set. Output them to two tsv files to use.
+ */
+ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Data;

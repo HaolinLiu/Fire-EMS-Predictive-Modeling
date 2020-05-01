@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * @Author: Haolin Liu
+ * @Date: 2020-02-12 12:12:37
+ * @LastEditTime: 2020-04-30 17:25:34
+ * @LastEditors: Haolin Liu
+ * @Description: The data type of a call. It includes id, code, time, address, and a list of responses.
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Text;
 

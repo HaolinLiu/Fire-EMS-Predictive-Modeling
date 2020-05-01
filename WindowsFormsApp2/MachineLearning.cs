@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * @Author: Haolin Liu
+ * @Date: 2020-02-16 01:44:33
+ * @LastEditTime: 2020-04-30 17:36:40
+ * @LastEditors: Haolin Liu
+ * @Description: Import data, combine data, output data. Then run machine learning algorithm. Evaluate it and output result.
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

@@ -1,4 +1,11 @@
-﻿using Microsoft.ML.Data;
+﻿/*
+ * @Author: Haolin Liu
+ * @Date: 2020-02-16 17:01:58
+ * @LastEditTime: 2020-04-30 17:26:29
+ * @LastEditors: Haolin Liu
+ * @Description: The data type for machine learning to analyse
+ */
+ using Microsoft.ML.Data;
 
 namespace WindowsFormsApp2
 {

@@ -1,4 +1,12 @@
-﻿using System;
+﻿/*
+ * @Author: Haolin Liu
+ * @Date: 2020-01-14 16:21:15
+ * @LastEditTime: 2020-04-30 17:23:12
+ * @LastEditors: Haolin Liu
+ * @Description: import data from excal and output them to DataTable
+ */
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Data;
