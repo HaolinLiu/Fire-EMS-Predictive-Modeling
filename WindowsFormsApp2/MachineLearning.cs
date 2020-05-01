@@ -14,7 +14,7 @@ namespace WindowsFormsApp2
     {
         private static string _appPath => Path.GetDirectoryName(Environment.GetCommandLineArgs()[0]);
         private static string _trainDataPath => Path.Combine(_appPath, "..", "..", "..", "Data", "ModelFileTrain.tsv");
-        private static string _testDataPath => Path.Combine(_appPath, "..", "..", "..", "Data", "ModelFileTest.tsv");
+        private static string _testDataPath => Path.Combine(_appPath, "..", "..", "..", "Data", "ModelFileTrain.tsv");
         private static string _modelPath => Path.Combine(_appPath, "..", "..", "..", "Models", "model.zip");
         private static string _testFileDir => Path.Combine(_appPath, "..", "..", "..", "Data");
 
@@ -39,10 +39,10 @@ namespace WindowsFormsApp2
             // label2.Text = _testDataPath;
 
             string trainDataPath = "C:\\Users\\haoli\\source\\repos\\Fire-EMS-Predictive-Modeling\\WindowsFormsApp2\\Data\\ModelFileTrain.tsv";
-            string testDataPath = "C:\\Users\\haoli\\source\\repos\\Fire-EMS-Predictive-Modeling\\WindowsFormsApp2\\Data\\ModelFileTrain.tsv";
+            string testDataPath = "C:\\Users\\haoli\\source\\repos\\Fire-EMS-Predictive-Modeling\\WindowsFormsApp2\\Data\\ModelFileTest.tsv";
 
-            // trainDataPath = _trainDataPath;
-            // testDataPath = _testDataPath;
+            trainDataPath = _trainDataPath;
+            testDataPath = _testDataPath;
 
 
             ModelFileCreater c = new ModelFileCreater();
