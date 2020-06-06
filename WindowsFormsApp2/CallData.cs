@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Data;
 using System.Text;
-
+using Microsoft.VisualBasic.FileIO;
 
 namespace WindowsFormsApp2
 {
@@ -27,8 +27,22 @@ namespace WindowsFormsApp2
                 }
 
                 while (!streamReader.EndOfStream)
-                {
-                    string[] row = streamReader.ReadLine().Split(',');
+                {   
+                    TextFieldParser parser = new TextFieldParser(new StringReader(streamReader.ReadLine()));
+                    parser.HasFieldsEnclosedInQuotes = true;
+                    parser.SetDelimiters(",");
+
+                    string[] row = null;
+
+                    while (!parser.EndOfData)
+                    {
+                        row = parser.ReadFields();
+                    }
+
+                    parser.Close();
+
+
+                    // string[] row = streamReader.ReadLine().Split(',');
                     DataRow newDataRow = newDataTable.NewRow();
                     for (int i = 0; i < colNames.Length; i++)
                     {

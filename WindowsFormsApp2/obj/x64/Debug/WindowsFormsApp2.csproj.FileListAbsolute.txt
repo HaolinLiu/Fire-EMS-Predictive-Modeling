@@ -42,3 +42,9 @@ C:\Users\haoli\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\x64\Debug\Wind
 C:\Users\haoli\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.pdb
 C:\Users\haoli\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\x64\Debug\CpuMathNative.dll
 C:\Users\haoli\source\repos\WindowsFormsApp2\WindowsFormsApp2\obj\x64\Debug\WindowsFormsApp2.inputBox.resources
+C:\Users\haoli\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\x64\Debug\CsvHelper.dll
+C:\Users\haoli\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\x64\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\haoli\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\x64\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\haoli\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\x64\Debug\CsvHelper.xml
+C:\Users\haoli\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\x64\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\haoli\source\repos\WindowsFormsApp2\WindowsFormsApp2\bin\x64\Debug\System.Threading.Tasks.Extensions.xml

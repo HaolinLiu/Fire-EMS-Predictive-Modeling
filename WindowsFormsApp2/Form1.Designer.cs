@@ -38,8 +38,14 @@
             this.select_button = new System.Windows.Forms.Button();
             this.analyse_button = new System.Windows.Forms.Button();
             this.import_button = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.options_box = new System.Windows.Forms.GroupBox();
+            this.label_end_time = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label_start_time = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.trackBar_time_end = new System.Windows.Forms.TrackBar();
             this.label_time = new System.Windows.Forms.Label();
             this.trackBar_time_start = new System.Windows.Forms.TrackBar();
             this.label_week = new System.Windows.Forms.Label();
@@ -63,26 +69,18 @@
             this.Min_button = new System.Windows.Forms.Button();
             this.Close_button = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.trackBar_time_end = new System.Windows.Forms.TrackBar();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label_start_time = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label_end_time = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel4.SuspendLayout();
             this.options_box.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar_time_end)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_time_start)).BeginInit();
             this.Import_panel.SuspendLayout();
             this.Result_box.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar_time_end)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -107,12 +105,12 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.splitContainer1.Panel2.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel2.Controls.Add(this.panel4);
             this.splitContainer1.Panel2.Controls.Add(this.Import_panel);
             this.splitContainer1.Panel2.Controls.Add(this.Min_button);
             this.splitContainer1.Panel2.Controls.Add(this.Close_button);
             this.splitContainer1.Panel2.Controls.Add(this.textBox1);
-            this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel2_Paint);
             this.splitContainer1.Size = new System.Drawing.Size(1225, 746);
@@ -190,6 +188,18 @@
             this.import_button.UseVisualStyleBackColor = true;
             this.import_button.Click += new System.EventHandler(this.Import_button_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(32, 12);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(219, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // panel4
             // 
             this.panel4.Controls.Add(this.options_box);
@@ -223,6 +233,57 @@
             this.options_box.TabIndex = 0;
             this.options_box.TabStop = false;
             this.options_box.Text = "Options";
+            // 
+            // label_end_time
+            // 
+            this.label_end_time.AutoSize = true;
+            this.label_end_time.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_end_time.Location = new System.Drawing.Point(787, 156);
+            this.label_end_time.Name = "label_end_time";
+            this.label_end_time.Size = new System.Drawing.Size(45, 19);
+            this.label_end_time.TabIndex = 12;
+            this.label_end_time.Text = "24:00";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(473, 133);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(70, 19);
+            this.label13.TabIndex = 11;
+            this.label13.Text = "End time";
+            // 
+            // label_start_time
+            // 
+            this.label_start_time.AutoSize = true;
+            this.label_start_time.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_start_time.Location = new System.Drawing.Point(787, 85);
+            this.label_start_time.Name = "label_start_time";
+            this.label_start_time.Size = new System.Drawing.Size(37, 19);
+            this.label_start_time.TabIndex = 10;
+            this.label_start_time.Text = "0:00";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(473, 62);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 19);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Start time";
+            // 
+            // trackBar_time_end
+            // 
+            this.trackBar_time_end.Location = new System.Drawing.Point(465, 154);
+            this.trackBar_time_end.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.trackBar_time_end.Maximum = 24;
+            this.trackBar_time_end.Name = "trackBar_time_end";
+            this.trackBar_time_end.Size = new System.Drawing.Size(332, 56);
+            this.trackBar_time_end.TabIndex = 8;
+            this.trackBar_time_end.Value = 24;
+            this.trackBar_time_end.Scroll += new System.EventHandler(this.trackBar_time_end_Scroll);
             // 
             // label_time
             // 
@@ -482,35 +543,13 @@
             this.textBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(271, 20);
+            this.textBox1.Location = new System.Drawing.Point(268, 30);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(391, 37);
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "Dispatch Analyser";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.IndianRed;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(32, 10);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(220, 59);
-            this.panel2.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, -9);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(219, 75);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel1
             // 
@@ -520,57 +559,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(960, 12);
             this.panel1.TabIndex = 0;
-            // 
-            // trackBar_time_end
-            // 
-            this.trackBar_time_end.Location = new System.Drawing.Point(465, 154);
-            this.trackBar_time_end.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.trackBar_time_end.Maximum = 24;
-            this.trackBar_time_end.Name = "trackBar_time_end";
-            this.trackBar_time_end.Size = new System.Drawing.Size(332, 56);
-            this.trackBar_time_end.TabIndex = 8;
-            this.trackBar_time_end.Value = 24;
-            this.trackBar_time_end.Scroll += new System.EventHandler(this.trackBar_time_end_Scroll);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(473, 62);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 19);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "Start time";
-            // 
-            // label_start_time
-            // 
-            this.label_start_time.AutoSize = true;
-            this.label_start_time.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_start_time.Location = new System.Drawing.Point(787, 85);
-            this.label_start_time.Name = "label_start_time";
-            this.label_start_time.Size = new System.Drawing.Size(37, 19);
-            this.label_start_time.TabIndex = 10;
-            this.label_start_time.Text = "0:00";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(473, 133);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(70, 19);
-            this.label13.TabIndex = 11;
-            this.label13.Text = "End time";
-            // 
-            // label_end_time
-            // 
-            this.label_end_time.AutoSize = true;
-            this.label_end_time.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_end_time.Location = new System.Drawing.Point(787, 156);
-            this.label_end_time.Name = "label_end_time";
-            this.label_end_time.Size = new System.Drawing.Size(45, 19);
-            this.label_end_time.TabIndex = 12;
-            this.label_end_time.Text = "24:00";
             // 
             // Dispatch
             // 
@@ -590,16 +578,15 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.options_box.ResumeLayout(false);
             this.options_box.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar_time_end)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_time_start)).EndInit();
             this.Import_panel.ResumeLayout(false);
             this.Result_box.ResumeLayout(false);
             this.Result_box.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar_time_end)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -611,7 +598,6 @@
         private System.Windows.Forms.Button save_button;
         private System.Windows.Forms.Button select_button;
         private System.Windows.Forms.Button analyse_button;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button Close_button;

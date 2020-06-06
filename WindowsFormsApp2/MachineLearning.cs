@@ -66,10 +66,10 @@ namespace WindowsFormsApp2
             List<long> result = new List<long>();
 
             for (int i=0; i<ana.NatureCodeTypeNum; i++){
-                result.Add(long.Parse(PredictIssue(ana.NatureCode[i])));
+                result.Add(long.Parse(PredictIssue(ana.NatureCodeType[i])));
             }
 
-            ResultData r = new ResultData(ana.NatureCode, ana.NatureCodeTypeNum, ana.UnitTypeName, ana.UnitTypeNum, result);
+            ResultData r = new ResultData(ana.NatureCodeType, ana.NatureCodeTypeNum, ana.UnitTypeName, ana.UnitTypeNum, result);
             r.PrintResult(_rulesFolderPath, value);
         }
 

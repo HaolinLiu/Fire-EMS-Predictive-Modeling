@@ -35,9 +35,7 @@ namespace WindowsFormsApp2
             {
                 ib.label1.Text = inputTips;
             }
-
-            
-
+        
             if (ib.ShowDialog()==DialogResult.OK)
             {
                 value = ib.getValue();
@@ -53,7 +51,7 @@ namespace WindowsFormsApp2
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

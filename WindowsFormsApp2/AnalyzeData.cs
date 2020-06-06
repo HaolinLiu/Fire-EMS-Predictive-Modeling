@@ -18,11 +18,13 @@ namespace WindowsFormsApp2
 
 		public int callCount = 0;
 		public int badDataCount = 0;
-		public bool[] NatureCodeType = new bool[1000];
+		public List<string> NatureCodeType = new List<string>();
+		// public bool[] NatureCodeType = new bool[1000];
+
 		// store if there is the nature code in the data
 		public int NatureCodeTypeNum = 0;
 		// store the nature code type number
-		public List<string> NatureCode = new List<string>();
+		// public List<string> NatureCode = new List<string>();
 
 		// store year information
 		public int yearCount = 0;
@@ -61,14 +63,15 @@ namespace WindowsFormsApp2
 			int rowCount = 0;
 
 			//set all nature code type to false. When add a call, change its nature code to true
-			for (int i = 0; i < 1000; i++)
-			{
-				NatureCodeType[i] = false;
-			}
+			// for (int i = 0; i < 1000; i++)
+			// {
+			// 	NatureCodeType[i] = false;
+			// }
 
 			dateRange[0] = new DateTime(2099, 1, 1, 0, 0, 0);
 			dateRange[1] = new DateTime(1900, 1, 1, 0, 0, 0);
 
+			NatureCodeTypeNum = 0;
 
 			foreach (DataRow row in callData.Rows)
 			{
@@ -104,10 +107,16 @@ namespace WindowsFormsApp2
 				}
 
 				// change the nature code to ture, like NatureCodeType[321] = true
-				NatureCodeType[Int16.Parse(natureCode)] = true;
+				// NatureCodeType[Int16.Parse(natureCode)] = true;
+
+				if (!NatureCodeType.Contains(natureCode)) {
+					NatureCodeType.Add(natureCode);
+					NatureCodeTypeNum++;
+				}
+
 
 				//Get all response entries for the current call
-				DataRow[] responsesToCall = responseData.Select("CallID = '" + callID.ToString() + "'");
+				DataRow[] responsesToCall = responseData.Select("[Call ID] = '" + callID.ToString() + "'");
 				
 				List<CallResponseData.Response> responses = new List<CallResponseData.Response>();
 
@@ -140,14 +149,14 @@ namespace WindowsFormsApp2
 
 
 			// get number of different nature code type
-			for (int i = 0; i < 1000; i++)
-			{
-				if (NatureCodeType[i] == true)
-				{
-					NatureCodeTypeNum++;
-					NatureCode.Add(i.ToString());
-				}
-			}
+			// for (int i = 0; i < 1000; i++)
+			// {
+			// 	if (NatureCodeType[i] == true)
+			// 	{
+			// 		NatureCodeTypeNum++;
+			// 		NatureCode.Add(i.ToString());
+			// 	}
+			// }
 
 			return data;
 		}

@@ -123,12 +123,12 @@ namespace WindowsFormsApp2
             // shows information on screen
             label1.Text = $"*       Call data file:    {fileDialog.SafeFileName}";
             label2.Text = $"*       Response data file:    {fileDialog1.SafeFileName}";
-            label3.Text = $"*       Call numbers:          {ml.GetAna().callCount}";
-            label4.Text = $"*       Nature code type numbers: {ml.GetAna().NatureCodeTypeNum}";
+            label3.Text = $"*       Call count:          {ml.GetAna().callCount}";
+            label4.Text = $"*       Nature code type count: {ml.GetAna().NatureCodeTypeNum}";
             label5.Text = $"*       Response unit type: {ml.GetAna().UnitTypeNum}";
-            label6.Text = $"*       Bad data numbers: {ml.GetAna().badDataCount}";
+            label6.Text = $"*       Bad data count: {ml.GetAna().badDataCount}";
             label7.Text = $"*       Earliest time: {ml.GetAna().dateRange[0].ToString()}";
-            label8.Text = $"*       Latist time: {ml.GetAna().dateRange[1].ToString()}";
+            label8.Text = $"*       Latest time: {ml.GetAna().dateRange[1].ToString()}";
 
 
             // input checkboxlist year
